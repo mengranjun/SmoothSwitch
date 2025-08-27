@@ -17,7 +17,7 @@ public class VoidTeleportHandler {
     public static void handleVoidTeleport(PlayerEntity player) {
         // 只在服务器端处理，且玩家存活、不在创造模式
         if (player.getWorld().isClient || !player.isAlive() || player.isCreative()) {
-        //if (player.getWorld().isClient || !player.isAlive()) { //或者创造模式也能进??
+        //if (player.getWorld().isClient || !player.isAlive()) { //或者创造模式也能进? 搞不懂ai咋想的
                 return;
         }
 
