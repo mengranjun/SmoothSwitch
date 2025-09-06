@@ -17,7 +17,7 @@ public class VoidTeleportHandler {
     public static void handleVoidTeleport(PlayerEntity player) {
         // 只在服务器端处理，且玩家存活、不在创造模式
         if (player.getWorld().isClient || !player.isAlive() || player.isCreative()) {
-        //if (player.getWorld().isClient || !player.isAlive()) { //或者创造模式也能进? 搞不懂ai咋想的
+        //if (player.getWorld().isClient || !player.isAlive()) { //测试用
                 return;
         }
 
@@ -87,7 +87,7 @@ public class VoidTeleportHandler {
      * 传送玩家到下界顶部
      * @param player 玩家实体
      */
-    private static void teleportToNetherTop(PlayerEntity player) {
+    private static void teleportToNetherTop(PlayerEntity player) {  //传送至下界顶方法
         if (!(player instanceof ServerPlayerEntity serverPlayer)) return;
 
         ServerWorld netherWorld = serverPlayer.getServer().getWorld(World.NETHER);
